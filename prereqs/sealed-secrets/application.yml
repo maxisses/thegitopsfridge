@@ -5,7 +5,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '1'
 spec:
-  project: configs
+  project: default
   source:
     path: prereqs/sealed-secrets/apps
     repoURL: https://github.com/maxisses/thegitopsfridge.git

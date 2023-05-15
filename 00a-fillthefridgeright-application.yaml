@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fingerweg
+spec:
+  project: default
+  source:
+    path: 00-fillthefridgeright/00a-base
+    repoURL: https://github.com/maxisses/thegitopsfridge.git
+    targetRevision: main
+  destination:
+    namespace: thegitopsfridge
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thegitopsfridge-app
+  labels:
+    app: thegitopsfridge-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: thegitopsfridge-app
+  template:
+    metadata:
+      labels:
+        app: thegitopsfridge-app
+    spec:
+      containers:
+      - name: thegitopsfridge-app
+        image: nginxinc/nginx-unprivileged
+        ports:
+        - containerPort: 8080

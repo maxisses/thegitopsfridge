@@ -1,0 +1,17 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: thegitopsfridge-web
+  namespace: sealed-secrets
+  labels:
+    app: thegitopsfridge-web
+    app.kubernetes.io/part-of: sealed-secrets
+spec:
+  host: thegitopsfridge-web.apps.science-cluster.sandbox2009.opentlc.com
+  to:
+    kind: Service
+    name: thegitopsfridge-web
+    weight: 100
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

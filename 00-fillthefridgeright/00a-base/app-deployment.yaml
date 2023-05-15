@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: thegitopsfridge-app
-        image: nginxinc/nginx-unprivileged
+        image: quay.io/mdargatz/thegitopsfridge:v1
         ports:
         - containerPort: 8080

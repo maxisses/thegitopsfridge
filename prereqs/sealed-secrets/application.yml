@@ -7,8 +7,8 @@ metadata:
 spec:
   project: configs
   source:
-    path: manifests/configs/sealed-secrets/apps
-    repoURL: https://github.com/Kounex/ocp-gitops.git
+    path: prereqs/sealed-secrets/apps
+    repoURL: https://github.com/maxisses/thegitopsfridge.git
     targetRevision: main
   destination:
     namespace: openshift-gitops
@@ -17,3 +17,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

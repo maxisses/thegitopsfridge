@@ -1,0 +1,7 @@
+namePrefix: production-
+commonLabels:
+  luckily: ihaveagitopsfridge
+bases:
+- ../../00a-base
+patchesStrategicMerge:
+- deployment.yaml

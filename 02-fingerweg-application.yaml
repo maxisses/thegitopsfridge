@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: fingerweg
 spec:
-  project: default
+  project: thegitopsfridge
   source:
     path: 02-fingerweg/auth
     repoURL: https://github.com/maxisses/thegitopsfridge.git

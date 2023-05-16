@@ -1,1 +1,2 @@
-prereqs/prep-oauth-htpass/htpasswdfile
+prereqs/prep-oauth-htpass/*
+idp-sicherung.yaml

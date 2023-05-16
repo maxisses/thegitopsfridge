@@ -2,11 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: thegitopsfridge-app
-  namespace: openshift-gitops
 spec:
   project: thegitopsfridge
   source:
-    path: 00-fillthefridgeright/00a-base
+    path: 00-fillthefridgeright/overlays/00b-theforgottenoverlay
     repoURL: https://github.com/maxisses/thegitopsfridge.git
     targetRevision: main
   destination:

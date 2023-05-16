@@ -6,7 +6,7 @@ metadata:
 spec:
   project: thegitopsfridge
   source:
-    path: 03-thefridgeisfull/03b-enlargethefridge
+    path: 03-thefridgeisfull/03b-justenlarge
     repoURL: https://github.com/maxisses/thegitopsfridge.git
     targetRevision: main
   destination:

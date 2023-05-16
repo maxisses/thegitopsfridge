@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: packoftomatoes
+  labels:
+    app: thegitopsfridge-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: thegitopsfridge-app
+  template:
+    metadata:
+      labels:
+        app: thegitopsfridge-app
+    spec:
+      containers:
+      - name: thegitopsfridge-app
+        image: quay.io/mdargatz/thegitopsfridge:v1
+        ports:
+        - containerPort: 8080

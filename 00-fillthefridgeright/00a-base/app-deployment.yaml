@@ -4,8 +4,6 @@ metadata:
   name: packoftomatoes
   labels:
     app: packoftomatoes
-  annotations:
-    argocd.argoproj.io/sync-options: ServerSideApply=true
 spec:
   replicas: 2
   selector:

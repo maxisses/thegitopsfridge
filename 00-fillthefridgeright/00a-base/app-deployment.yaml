@@ -4,6 +4,7 @@ metadata:
   name: packoftomatoes
   labels:
     app: packoftomatoes
+    app.kubernetes.io/part-of: myfridge
 spec:
   replicas: 2
   selector:

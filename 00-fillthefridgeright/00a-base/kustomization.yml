@@ -9,5 +9,5 @@ resources:
   - app-ingress.yaml
   - app-svc.yaml
 
-commonLabels:
-  app.kubernetes.io/part-of: myfridge
+# commonLabels:
+#   app.kubernetes.io/part-of: myfridge

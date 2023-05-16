@@ -4,6 +4,7 @@ metadata:
   name: butter
   labels:
     app: butter
+    app.kubernetes.io/part-of: myfridge
 spec:
   replicas: 2
   selector:

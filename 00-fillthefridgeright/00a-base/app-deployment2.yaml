@@ -4,6 +4,7 @@ metadata:
   name: milkcarton
   labels:
     app: milkcarton
+    app.kubernetes.io/part-of: myfridge
 spec:
   replicas: 2
   selector:

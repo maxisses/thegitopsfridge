@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: thegitopsfridge-app
+  name: packoftomatoes
 spec:
-  replicas: 4
+  replicas: 5

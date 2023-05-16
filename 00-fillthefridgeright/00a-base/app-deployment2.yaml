@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: packoftomatoes
+  name: milkcarton
   labels:
-    app: thegitopsfridge-app
+    app: milkcarton
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: thegitopsfridge-app
+      app: milkcarton
   template:
     metadata:
       labels:
-        app: thegitopsfridge-app
+        app: milkcarton
     spec:
       containers:
-      - name: thegitopsfridge-app
+      - name: milkcarton
         image: quay.io/mdargatz/thegitopsfridge:v1
         ports:
         - containerPort: 8080

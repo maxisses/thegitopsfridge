@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: packoftomatoes
   labels:
-    app: thegitopsfridge-app
+    app: packoftomatoes
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: thegitopsfridge-app
+      app: packoftomatoes
   template:
     metadata:
       labels:
-        app: thegitopsfridge-app
+        app: packoftomatoes
     spec:
       containers:
-      - name: thegitopsfridge-app
+      - name: packoftomatoes
         image: quay.io/mdargatz/thegitopsfridge:v1
         ports:
         - containerPort: 8080

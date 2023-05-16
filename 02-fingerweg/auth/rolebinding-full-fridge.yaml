@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: potentially-moldy-user-access
+  namespace: potentially-moldy
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: full-fridge
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: dad1
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: parent1
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: parent2

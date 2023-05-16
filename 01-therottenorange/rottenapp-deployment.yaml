@@ -5,8 +5,9 @@ metadata:
   namespace: potentially-moldy-stuff
   labels:
     app: moldyoranges
+    app.kubernetes.io/part-of: myfridge
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: moldyoranges

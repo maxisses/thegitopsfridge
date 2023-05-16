@@ -1,13 +1,12 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: thegitopsfridge-web
+  name: moldyoranges
   namespace: thegitopsfridge
   labels:
-    app: thegitopsfridge-web
-    app.kubernetes.io/part-of: thegitopsfridge
+    app: moldyoranges
 spec:
-  host: .apps.science-cluster.sandbox2009.opentlc.com
+  host: rottenoranges.apps.science-cluster.sandbox2009.opentlc.com
   to:
     kind: Service
     name: thegitopsfridge-app

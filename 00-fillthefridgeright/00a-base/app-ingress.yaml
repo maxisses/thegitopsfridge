@@ -1,13 +1,12 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: thegitopsfridge-web
+  name: packoftomatoes
   namespace: thegitopsfridge
   labels:
-    app: thegitopsfridge-web
-    app.kubernetes.io/part-of: thegitopsfridge
+    app: packoftomatoes
 spec:
-  host: thegitopsfridge-web.apps-crc.testing
+  host: packoftomatoes.apps-crc.testing
   to:
     kind: Service
     name: thegitopsfridge-app

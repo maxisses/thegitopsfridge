@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: thegitopsfridge-app
+  namespace: openshift-gitops
 spec:
   project: thegitopsfridge
   source:
@@ -15,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

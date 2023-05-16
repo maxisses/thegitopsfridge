@@ -7,4 +7,4 @@ resources:
   - app-svc.yaml
 
 commonLabels:
-  app.kubernetes.io/part-of: thegitopsfridge
+  app.kubernetes.io/part-of: packoftomatoes

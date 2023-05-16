@@ -7,7 +7,7 @@ metadata:
     app: thegitopsfridge-web
     app.kubernetes.io/part-of: thegitopsfridge
 spec:
-  host: thegitopsfridge-web.apps-crc.testing
+  host: .apps.science-cluster.sandbox2009.opentlc.com
   to:
     kind: Service
     name: thegitopsfridge-app

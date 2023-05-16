@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: thegitopsfridge-app
+  name: moldyoranges
+  namespace: potentially-moldy-stuff
   labels:
-    app: thegitopsfridge-app
+    app: moldyoranges
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: thegitopsfridge-app
+      app: moldyoranges
   template:
     metadata:
       labels:
-        app: thegitopsfridge-app
+        app: moldyoranges
     spec:
       containers:
-      - name: thegitopsfridge-app
+      - name: moldyoranges
         image: quay.io/mdargatz/thegitopsfridge-orange:v1
         ports:
         - containerPort: 8080

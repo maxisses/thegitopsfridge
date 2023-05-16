@@ -6,7 +6,7 @@ metadata:
   labels:
     app: packoftomatoes
 spec:
-  host: packoftomatoes.apps-crc.testing
+  host: packoftomatoes.apps.science-cluster.sandbox2009.opentlc.com
   to:
     kind: Service
     name: thegitopsfridge-app

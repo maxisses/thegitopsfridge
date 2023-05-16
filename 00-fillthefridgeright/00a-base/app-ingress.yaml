@@ -9,7 +9,7 @@ spec:
   host: packoftomatoes.apps.science-cluster.sandbox2009.opentlc.com
   to:
     kind: Service
-    name: thegitopsfridge-app
+    name: packoftomatoes
     weight: 100
   tls:
     termination: edge

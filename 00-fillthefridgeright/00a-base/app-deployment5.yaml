@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: milkcarton
+  name: packofeggs
   labels:
-    app: milkcarton
+    app: packofeggs
     app.kubernetes.io/part-of: myfridge
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-      app: milkcarton
+      app: packofeggs
   template:
     metadata:
       labels:
-        app: milkcarton
+        app: packofeggs
     spec:
       containers:
-      - name: milkcarton
+      - name: packofeggs
         image: quay.io/mdargatz/thegitopsfridge:v1
         ports:
         - containerPort: 8080

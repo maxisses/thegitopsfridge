@@ -3,4 +3,4 @@ kind: Deployment
 metadata:
   name: packoftomatoes
 spec:
-  replicas: 5
+  replicas: 3

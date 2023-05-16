@@ -6,6 +6,7 @@ resources:
   - app-deployment1.yaml
   - app-deployment2.yaml
   - app-deployment3.yaml
+  - app-deployment4.yaml
   - app-ingress.yaml
   - app-svc.yaml
 

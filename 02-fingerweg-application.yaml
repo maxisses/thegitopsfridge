@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fingerweg
+  name: 02b-fingerweg
   namespace: openshift-gitops
 spec:
   project: thegitopsfridge

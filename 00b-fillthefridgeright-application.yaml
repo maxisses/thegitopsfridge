@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fillthefridgeright
+  name: 00a-fillthefridgeright
   namespace: openshift-gitops
 spec:
   project: thegitopsfridge

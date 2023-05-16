@@ -4,7 +4,7 @@ metadata:
   name: potentiallymoldycompartment
   namespace: openshift-gitops
 spec:
-  project: thegitopsfridge
+  project: 01-thegitopsfridge
   source:
     path: 01-therottenorange/
     repoURL: https://github.com/maxisses/thegitopsfridge.git

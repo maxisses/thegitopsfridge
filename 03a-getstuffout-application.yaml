@@ -1,20 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 00a-fillthefridgeright
+  name: 03a-getstuffout
   namespace: openshift-gitops
 spec:
   project: thegitopsfridge
   source:
-    path: 00-fillthefridgeright/00a-base
+    path: 03-thefridgeisfull/03a-getstuffout
     repoURL: https://github.com/maxisses/thegitopsfridge.git
     targetRevision: main
   destination:
-    namespace: topofthefridge
+    namespace: ack-system
     server: 'https://kubernetes.default.svc'
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true

@@ -1,2 +1,3 @@
 prereqs/prep-oauth-htpass/*
 idp-sicherung.yaml
+prereqs/05-awscontroller/*

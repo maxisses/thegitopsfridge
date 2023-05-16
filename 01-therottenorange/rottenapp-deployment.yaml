@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: moldyoranges
-  namespace: potentially-moldy-stuff
   labels:
     app: moldyoranges
     app.kubernetes.io/part-of: myfridge

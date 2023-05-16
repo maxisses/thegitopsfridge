@@ -6,6 +6,3 @@ resources:
   - rottenapp-ingress.yaml
   - rottenapp-svc.yaml
   - rottenapp-isolation.yaml
-
-commonLabels:
-  app.kubernetes.io/part-of: thegitopsfridge

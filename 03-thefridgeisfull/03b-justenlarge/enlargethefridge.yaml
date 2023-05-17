@@ -12,7 +12,7 @@ metadata:
     hive.openshift.io/managed: 'true'
     machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t

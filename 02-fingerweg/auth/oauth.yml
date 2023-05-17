@@ -6,9 +6,15 @@ metadata:
     argocd.argoproj.io/sync-options: ServerSideApply=true
 spec:
   identityProviders:
-    - name: theaihuddlers
+    - name: fridgeusers
       mappingMethod: claim
       type: HTPasswd
       htpasswd:
         fileData:
-          name: htpasswd-keepout
+          name: keepout
+    - htpasswd:
+        fileData:
+          name: scienceusers
+      mappingMethod: claim
+      name: scienceusers
+      type: HTPasswd

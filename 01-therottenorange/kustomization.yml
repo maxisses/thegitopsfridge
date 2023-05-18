@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
   - rottenapp-deployment.yaml
+  - rottenapp-deployment2.yaml
   - rottenapp-ingress.yaml
   - rottenapp-svc.yaml

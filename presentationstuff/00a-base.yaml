@@ -1,0 +1,7 @@
+## kustomize overlay
+apiVersion: fridge/v1
+kind: fridgeitems
+items:
+  vegetables:
+    - name: tomatoes
+      replicas: 5

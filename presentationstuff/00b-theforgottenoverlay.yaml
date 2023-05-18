@@ -1,0 +1,12 @@
+apiVersion: fridge/v1
+kind: fridgeitems
+items:
+  vegetables:
+    - name: tomatoes
+      replicas: 2
+  candy:
+    - name: chocolatebar
+      replicas: 2
+  dairy-products:
+    - name: milk
+      replicas: 3

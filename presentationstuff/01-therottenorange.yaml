@@ -1,0 +1,7 @@
+apiVersion: fridge/v1
+kind: FridgeItems
+items:
+  fruits:
+    - name: oranges
+      replicas: 5
+      compartment: 'potentiallymoldy'

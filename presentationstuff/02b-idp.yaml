@@ -1,0 +1,12 @@
+apiVersion: fridge/v1
+kind: FridgeAccess
+accesstype:
+  - name: fullfridgeaccess
+    compartments: all
+    famMemberRef:
+      - name: parents
+  - name: limited
+    compartments: potentially-moldy
+    famMemberRef:
+      - name: kids
+      - name: littleThieves

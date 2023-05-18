@@ -1,6 +1,6 @@
-## kustomize overlay
+## update only
 apiVersion: fridge/v1
-kind: fridgeitems
+kind: FridgeItems
 items:
   vegetables:
     - name: tomatoes

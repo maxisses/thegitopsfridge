@@ -1,0 +1,9 @@
+apiVersion: fridge/v1
+kind: FridgeSize
+compartments:
+  - name: topofthefridge
+    location: top
+  - name: potentially-moldy
+    location: middle
+  - name: freezer
+    location: bottom

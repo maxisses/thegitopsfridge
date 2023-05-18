@@ -1,5 +1,5 @@
 apiVersion: fridge/v1
-kind: fridgeitems
+kind: FridgeItems
 items:
   vegetables:
     - name: tomatoes
@@ -10,3 +10,4 @@ items:
   dairy-products:
     - name: milk
       replicas: 3
+    - name: ...

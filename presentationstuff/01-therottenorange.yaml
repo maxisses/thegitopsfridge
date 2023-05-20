@@ -4,4 +4,4 @@ items:
   fruits:
     - name: oranges
       replicas: 5
-      compartment: 'potentiallymoldy'
+      compartment: potentiallymoldy

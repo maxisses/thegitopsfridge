@@ -13,7 +13,7 @@ oc apply -f 01-therottenoranges-application.yaml
 --> pretend "I" am such a thief, take smth out and I am veryyy hungry
 oc delete deployment milkcarton -n topofthefridge
 ### two B - add an idp
---> I probably couldnt image how they much would eat if the fridge really worked that way... it solves my, but causes new probs, I need something else
+--> I probably couldnt imagine how much the kids would eat if the fridge really worked that way... it solves my, but causes new probs, I need something else
 --> lets put a lock:
 oc apply -f fingerweg-application.yaml
 

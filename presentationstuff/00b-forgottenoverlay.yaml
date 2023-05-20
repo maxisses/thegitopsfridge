@@ -4,4 +4,4 @@ kind: FridgeItems
 items:
   vegetables:
     - name: tomatoes
-      replicas: 5
+      replicas: 3

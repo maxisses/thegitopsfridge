@@ -11,5 +11,5 @@ spec:
   masterUsername: postgres
   masterUserPassword:
     namespace: ack-system
-    name: mypgpassword
+    name: "mypgpassword"
     key: password

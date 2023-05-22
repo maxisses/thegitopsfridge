@@ -1,3 +1,4 @@
 prereqs/prep-oauth-htpass/*
 idp-sicherung.yaml
 prereqs/05-awscontroller/*
+03-thefridgeisfull/03a-getstuffout/rds-postgres.yaml

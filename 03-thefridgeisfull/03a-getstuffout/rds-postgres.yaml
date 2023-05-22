@@ -8,7 +8,7 @@ spec:
   dbInstanceIdentifier: movingfromk8stoaws
   engine: postgres
   engineVersion: "14"
-  masterUsername: postgres
+  masterUsername: "postgres"
   masterUserPassword:
     namespace: ack-system
     name: "mypgpassword"

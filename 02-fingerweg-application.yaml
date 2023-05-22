@@ -4,7 +4,7 @@ metadata:
   name: 02b-fingerweg
   namespace: openshift-gitops
 spec:
-  project: thegitopsfridge
+  project: thegitopsfridge-access
   source:
     path: 02-fingerweg/auth
     repoURL: https://github.com/maxisses/thegitopsfridge.git

@@ -1,15 +1,15 @@
 apiVersion: rds.services.k8s.aws/v1alpha1
 kind: DBInstance
 metadata:
-  name: movingfromk8stoaws
+  name: k8spgtoaws
 spec:
   allocatedStorage: 20
   dbInstanceClass: db.t4g.micro
-  dbInstanceIdentifier: movingfromk8stoaws
+  dbInstanceIdentifier: k8stopgtoaws
   engine: postgres
   engineVersion: "14"
-  masterUsername: "postgres"
+  masterUsername: postgres
   masterUserPassword:
     namespace: ack-system
-    name: "mypgpassword"
+    name: mypgpassword
     key: password

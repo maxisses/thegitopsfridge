@@ -1,6 +1,6 @@
 apiVersion: s3.services.k8s.aws/v1alpha1
 kind: Bucket
 metadata:
-  name: iamout
+  name: movingfromk8stoawsxx
 spec:
-  name: iamout
+  name: movingfromk8stoawsxx

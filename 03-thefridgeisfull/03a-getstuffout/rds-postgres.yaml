@@ -10,6 +10,6 @@ spec:
   engineVersion: "14"
   masterUsername: postgres
   masterUserPassword:
-    namespace: default
-    name: movingfromk8stoaws-password
+    namespace: ack-system
+    name: mypgpassword
     key: password

@@ -1,0 +1,15 @@
+apiVersion: rds.services.k8s.aws/v1alpha1
+kind: DBInstance
+metadata:
+  name: movingfromk8stoaws
+spec:
+  allocatedStorage: 20
+  dbInstanceClass: db.t4g.micro
+  dbInstanceIdentifier: movingfromk8stoaws
+  engine: postgres
+  engineVersion: "14"
+  masterUsername: postgres
+  masterUserPassword:
+    namespace: default
+    name: movingfromk8stoaws-password
+    key: password

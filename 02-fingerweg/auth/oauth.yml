@@ -12,9 +12,3 @@ spec:
       htpasswd:
         fileData:
           name: keepout
-    - htpasswd:
-        fileData:
-          name: scienceusers
-      mappingMethod: claim
-      name: scienceusers
-      type: HTPasswd

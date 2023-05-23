@@ -1,0 +1,68 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    machine.openshift.io/memoryMb: '32768'
+    machine.openshift.io/vCPU: '8'
+  name: BULKMYFRIDGE
+  generation: 1
+  namespace: openshift-machine-api
+  labels:
+    hive.openshift.io/machine-pool: worker
+    hive.openshift.io/managed: 'true'
+    machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
+      machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkitup-eu-central-1c
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkitup-eu-central-1c
+    spec:
+      providerSpec:
+        value:
+          userDataSecret:
+            name: worker-user-data
+          placement:
+            availabilityZone: eu-central-1c
+            region: eu-central-1
+          credentialsSecret:
+            name: aws-cloud-credentials
+          instanceType: m5.2xlarge
+          metadata:
+            creationTimestamp: null
+          blockDevices:
+            - ebs:
+                encrypted: true
+                iops: 2000
+                kmsKey:
+                  arn: ''
+                volumeSize: 100
+                volumeType: gp3
+          securityGroups:
+            - filters:
+                - name: 'tag:Name'
+                  values:
+                    - science-cluster-fcv4t-worker-sg
+          kind: AWSMachineProviderConfig
+          metadataServiceOptions: {}
+          tags:
+            - name: kubernetes.io/cluster/science-cluster-fcv4t
+              value: owned
+          deviceIndex: 0
+          ami:
+            id: ami-0b2586f09f16dd949
+          subnet:
+            filters:
+              - name: 'tag:Name'
+                values:
+                  - science-cluster-fcv4t-private-eu-central-1c
+          apiVersion: machine.openshift.io/v1beta1
+          iamInstanceProfile:
+            id: science-cluster-fcv4t-worker-profile

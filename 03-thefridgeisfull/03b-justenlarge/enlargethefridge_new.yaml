@@ -4,7 +4,7 @@ metadata:
   annotations:
     machine.openshift.io/memoryMb: '32768'
     machine.openshift.io/vCPU: '8'
-  name: BULKMYFRIDGE
+  name: bulk-my-fridge
   generation: 1
   namespace: openshift-machine-api
   labels:
@@ -16,14 +16,14 @@ spec:
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
-      machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkitup-eu-central-1c
+      machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkthefridge-eu-central-1c
   template:
     metadata:
       labels:
         machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
         machine.openshift.io/cluster-api-machine-role: worker
         machine.openshift.io/cluster-api-machine-type: worker
-        machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkitup-eu-central-1c
+        machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkthefridge-eu-central-1c
     spec:
       providerSpec:
         value:

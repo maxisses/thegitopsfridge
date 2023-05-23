@@ -1,6 +1,6 @@
 # Dockerfile
 # Use a lightweight Node.js image as base
-FROM registry.access.redhat.com/ubi9/nodejs-18-minimal
+FROM registry.access.redhat.com/ubi9/nodejs-16@sha256:6dc6d99523beefb156dec2acd43cc2e9709957c1e984880e8d973c821ebaf5b8
 
 # Set the working directory in the container
 WORKDIR /opt/app-root/src

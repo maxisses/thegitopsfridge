@@ -9,7 +9,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '10'
 spec:
-  host: sealed-secrets-web.apps.science-cluster.sandbox2009.opentlc.com
+  host: sealed-secrets-web.apps.ocp5.stormshift.coe.muc.redhat.com
   to:
     kind: Service
     name: sealed-secrets-web

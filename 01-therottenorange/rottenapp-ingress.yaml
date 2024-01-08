@@ -5,7 +5,7 @@ metadata:
   labels:
     app: moldyoranges
 spec:
-  host: rottenoranges.apps.science-cluster.sandbox2009.opentlc.com
+  host: rottenoranges.apps.cluster-9hgj9.9hgj9.sandbox1381.opentlc.com
   to:
     kind: Service
     name: moldyoranges

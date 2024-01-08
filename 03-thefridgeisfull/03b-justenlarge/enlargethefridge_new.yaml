@@ -1,68 +1,76 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  annotations:
-    machine.openshift.io/memoryMb: '32768'
-    machine.openshift.io/vCPU: '8'
-  name: bulk-my-fridge
-  generation: 1
+  name: cluster-metal-9hgj9-24zp4-worker-eu-central-1a
   namespace: openshift-machine-api
   labels:
-    hive.openshift.io/machine-pool: worker
-    hive.openshift.io/managed: 'true'
-    machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
+    machine.openshift.io/cluster-api-cluster: cluster-9hgj9-24zp4
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
-      machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkthefridge-eu-central-1c
+      machine.openshift.io/cluster-api-cluster: cluster-9hgj9-24zp4
+      machine.openshift.io/cluster-api-machineset: cluster-metal-9hgj9-24zp4-worker-eu-central-1a
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: science-cluster-fcv4t
+        machine.openshift.io/cluster-api-cluster: cluster-9hgj9-24zp4
         machine.openshift.io/cluster-api-machine-role: worker
         machine.openshift.io/cluster-api-machine-type: worker
-        machine.openshift.io/cluster-api-machineset: science-cluster-fcv4t-bulkthefridge-eu-central-1c
+        machine.openshift.io/cluster-api-machineset: cluster-metal-9hgj9-24zp4-worker-eu-central-1a
     spec:
+      lifecycleHooks: {}
+      metadata: {}
       providerSpec:
         value:
           userDataSecret:
             name: worker-user-data
           placement:
-            availabilityZone: eu-central-1c
+            availabilityZone: eu-central-1a
             region: eu-central-1
           credentialsSecret:
             name: aws-cloud-credentials
-          instanceType: m5.2xlarge
+          instanceType: m5.metal
           metadata:
             creationTimestamp: null
           blockDevices:
             - ebs:
                 encrypted: true
-                iops: 2000
+                iops: 0
                 kmsKey:
                   arn: ''
                 volumeSize: 100
-                volumeType: gp3
+                volumeType: gp2
           securityGroups:
             - filters:
                 - name: 'tag:Name'
                   values:
-                    - science-cluster-fcv4t-worker-sg
+                    - cluster-9hgj9-24zp4-worker-sg
           kind: AWSMachineProviderConfig
           metadataServiceOptions: {}
           tags:
-            - name: kubernetes.io/cluster/science-cluster-fcv4t
+            - name: kubernetes.io/cluster/cluster-9hgj9-24zp4
               value: owned
+            - name: Stack
+              value: project ocp4-cluster-9hgj9
+            - name: env_type
+              value: ocp4-cluster
+            - name: guid
+              value: 9hgj9
+            - name: owner
+              value: unknown
+            - name: platform
+              value: RHPDS
+            - name: uuid
+              value: b24325a9-c1fd-5de4-9f7f-ff5003ba254a
           deviceIndex: 0
           ami:
-            id: ami-0b2586f09f16dd949
+            id: ami-0bedd84a7d8766fe8
           subnet:
             filters:
               - name: 'tag:Name'
                 values:
-                  - science-cluster-fcv4t-private-eu-central-1c
+                  - cluster-9hgj9-24zp4-private-eu-central-1a
           apiVersion: machine.openshift.io/v1beta1
           iamInstanceProfile:
-            id: science-cluster-fcv4t-worker-profile
+            id: cluster-9hgj9-24zp4-worker-profile

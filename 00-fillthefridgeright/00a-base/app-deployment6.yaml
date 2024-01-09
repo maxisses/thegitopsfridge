@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: veganproducts
+  labels:
+    app: chocolatebars
+    app.kubernetes.io/part-of: myfridge
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chocolatebars
+  template:
+    metadata:
+      labels:
+        app: chocolatebars
+    spec:
+      containers:
+      - name: chocolatebars
+        image: quay.io/mdargatz/thegitopsfridge:v1
+        ports:
+        - containerPort: 8080
